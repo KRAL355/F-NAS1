@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { background: #020617; color: #f1f5f9; }
+
+.gradient-text {
+  background: linear-gradient(90deg, #10b981, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.card {
+  @apply bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur;
+}
