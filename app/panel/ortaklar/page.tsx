@@ -6,19 +6,13 @@ import PanelSidebar from "@/components/PanelSidebar";
 
 export default function Ortaklar() {
   const [kopyalandi, setKopyalandi] = useState(false);
-  const davetLink = "https://finans-platform.vercel.app/ref/79214";
+  const davetLink = "https://f-nas1.vercel.app/ref/00000";
 
   function kopyala() {
     navigator.clipboard.writeText(davetLink);
     setKopyalandi(true);
     setTimeout(() => setKopyalandi(false), 2000);
   }
-
-  const ortaklar = [
-    { kullanici: "ahmet_y", gelir: "$12,40", alan: "Seviye 1", tarih: "18.09.2026" },
-    { kullanici: "mehmet.k", gelir: "$8,20", alan: "Seviye 1", tarih: "17.09.2026" },
-    { kullanici: "zeynep99", gelir: "$3,80", alan: "Seviye 2", tarih: "15.09.2026" },
-  ];
 
   return (
     <div className="flex min-h-screen">
@@ -44,7 +38,7 @@ export default function Ortaklar() {
           <div className="card flex items-center gap-4 p-5">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">👥</div>
             <div>
-              <div className="text-2xl font-bold text-blue-400">0 PEOPLE</div>
+              <div className="text-2xl font-bold text-blue-400">0 KİŞİ</div>
               <div className="text-xs text-slate-400">Toplam Yönlendirme Sayısı</div>
             </div>
           </div>
@@ -78,7 +72,7 @@ export default function Ortaklar() {
           </button>
         </div>
 
-        {/* ORTAKLAR TABLOSU */}
+        {/* ORTAKLAR TABLOSU - BOŞ */}
         <div className="mt-8">
           <h2 className="mb-3 text-lg font-bold text-amber-400">ORTAKLARIM</h2>
           <div className="card overflow-hidden">
@@ -92,22 +86,13 @@ export default function Ortaklar() {
                 </tr>
               </thead>
               <tbody>
-                {ortaklar.length === 0 ? (
-                  <tr>
-                    <td colSpan={4} className="p-8 text-center text-slate-500">
-                      Henüz ortağınız yok. Davet linkinizi paylaşarak başlayın!
-                    </td>
-                  </tr>
-                ) : (
-                  ortaklar.map((o) => (
-                    <tr key={o.kullanici} className="border-b border-slate-800/60 last:border-0">
-                      <td className="p-4 font-medium">{o.kullanici}</td>
-                      <td className="p-4 text-emerald-400">{o.gelir}</td>
-                      <td className="p-4 text-slate-400">{o.alan}</td>
-                      <td className="p-4 text-slate-400">{o.tarih}</td>
-                    </tr>
-                  ))
-                )}
+                <tr>
+                  <td colSpan={4} className="p-12 text-center text-slate-500">
+                    <div className="text-4xl">🤝</div>
+                    <p className="mt-3">Henüz ortağınız yok.</p>
+                    <p className="mt-1 text-xs">Davet linkinizi paylaşarak başlayın!</p>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
