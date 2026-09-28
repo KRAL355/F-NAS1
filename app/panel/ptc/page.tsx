@@ -21,7 +21,6 @@ export default function PTC() {
           <CikisButonu />
         </div>
 
-        {/* SEKMELER */}
         <div className="mt-8 flex flex-wrap gap-2">
           <button onClick={() => setTab("gorus")}
             className={`rounded-lg px-5 py-2.5 text-sm font-medium ${tab === "gorus" ? "bg-purple-600 text-white" : "border border-slate-700 text-slate-300 hover:bg-slate-900"}`}>
@@ -45,40 +44,19 @@ export default function PTC() {
   );
 }
 
-/* ---------- GÖRÜŞ SEKMESİ ---------- */
+/* ---------- GÖRÜŞ SEKMESİ (BOŞ) ---------- */
 function GorusTab() {
-  const ads = [
-    { id: 1, title: "Kripto Borsası - Üye Ol", reward: "$0,002", time: 10, icon: "₿" },
-    { id: 2, title: "Youtube Kanalımı İzle", reward: "$0,004", time: 20, icon: "▶️" },
-    { id: 3, title: "Blog Yazımı Oku", reward: "$0,006", time: 30, icon: "📰" },
-    { id: 4, title: "Anket Doldur", reward: "$0,008", time: 40, icon: "📋" },
-    { id: 5, title: "Instagram Sayfam", reward: "$0,010", time: 50, icon: "📷" },
-    { id: 6, title: "Yeni Proje Tanıtımı", reward: "$0,012", time: 60, icon: "🚀" },
-  ];
-
   return (
     <div className="mt-6">
       <p className="mb-4 text-sm text-slate-400">
-        Aşağıdaki reklamları izleyerek kazanç bakiyenize para ekleyin. Her reklam belirtilen saniye kadar açık kalmalıdır.
+        Aşağıdaki reklamları izleyerek kazanç bakiyenize para ekleyin.
       </p>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {ads.map((a) => (
-          <div key={a.id} className="card p-5">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-2xl">{a.icon}</div>
-              <div className="flex-1">
-                <h3 className="text-sm font-semibold">{a.title}</h3>
-                <div className="mt-1 flex gap-3 text-xs text-slate-400">
-                  <span className="text-emerald-400 font-semibold">{a.reward}</span>
-                  <span>⏱️ {a.time} sn</span>
-                </div>
-              </div>
-            </div>
-            <button className="mt-4 w-full rounded-lg bg-emerald-500 py-2 text-xs font-medium text-slate-950 hover:bg-emerald-400">
-              İZLE & KAZAN
-            </button>
-          </div>
-        ))}
+      <div className="card flex flex-col items-center justify-center p-12 text-center">
+        <div className="text-5xl">📭</div>
+        <h3 className="mt-4 text-lg font-semibold text-slate-200">Şu an reklam yok</h3>
+        <p className="mt-2 max-w-md text-sm text-slate-400">
+          Kullanıcılar reklam ekledikçe burada görünecek. Kendiniz de reklam ekleyebilirsiniz.
+        </p>
       </div>
     </div>
   );
@@ -182,51 +160,19 @@ function EkleTab() {
   );
 }
 
-/* ---------- REKLAMLARIM SEKMESİ ---------- */
+/* ---------- REKLAMLARIM SEKMESİ (BOŞ) ---------- */
 function ReklamlarimTab() {
-  const reklamlar = [
-    { id: 1, baslik: "Blog Yazım", url: "https://ornek.com/yazi", sure: 30, izlenme: 142, harcama: "$0,852", durum: "Aktif" },
-    { id: 2, baslik: "Youtube Kanalım", url: "https://youtube.com/watch", sure: 60, izlenme: 89, harcama: "$1,068", durum: "Aktif" },
-    { id: 3, baslik: "Instagram Sayfam", url: "https://instagram.com/", sure: 10, izlenme: 305, harcama: "$0,610", durum: "Bitti" },
-  ];
-
   return (
     <div className="mt-6">
       <p className="mb-4 text-sm text-slate-400">
-        Yayında olan ve geçmiş reklamlarınızın listesi. İzlenme ve harcama detaylarını görüntüleyin.
+        Yayında olan ve geçmiş reklamlarınızın listesi.
       </p>
-      <div className="card overflow-hidden">
-        <table className="w-full text-sm">
-          <thead className="border-b border-slate-800 bg-slate-900/50 text-left text-slate-400">
-            <tr>
-              <th className="p-4">ID</th>
-              <th className="p-4">Başlık</th>
-              <th className="p-4">Süre</th>
-              <th className="p-4">İzlenme</th>
-              <th className="p-4">Harcama</th>
-              <th className="p-4">Durum</th>
-            </tr>
-          </thead>
-          <tbody>
-            {reklamlar.map((r) => (
-              <tr key={r.id} className="border-b border-slate-800/60 last:border-0">
-                <td className="p-4 text-slate-400">#{r.id}</td>
-                <td className="p-4">
-                  <div className="font-medium">{r.baslik}</div>
-                  <div className="text-xs text-slate-500">{r.url}</div>
-                </td>
-                <td className="p-4">{r.sure} sn</td>
-                <td className="p-4">{r.izlenme}</td>
-                <td className="p-4 text-emerald-400">{r.harcama}</td>
-                <td className="p-4">
-                  <span className={`rounded-full px-2 py-1 text-xs ${r.durum === "Aktif" ? "bg-emerald-500/10 text-emerald-400" : "bg-slate-500/10 text-slate-400"}`}>
-                    {r.durum}
-                  </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="card flex flex-col items-center justify-center p-12 text-center">
+        <div className="text-5xl">📢</div>
+        <h3 className="mt-4 text-lg font-semibold text-slate-200">Henüz reklamınız yok</h3>
+        <p className="mt-2 max-w-md text-sm text-slate-400">
+          "Bağlantı Ekle" sekmesinden ilk reklamınızı oluşturun.
+        </p>
       </div>
     </div>
   );
