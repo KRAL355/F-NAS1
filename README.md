@@ -1,1 +1,1 @@
-# F-NAS1
+# finans-platform
