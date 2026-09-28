@@ -1,10 +1,9 @@
-import Link from "next/link";
 import CikisButonu from "@/components/CikisButonu";
 import PanelSidebar from "@/components/PanelSidebar";
 
 const quickStats = [
-  { label: "Günlük Kâr", value: "15 USD", icon: "📅" },
-  { label: "Haftalık Kâr", value: "105 USD", icon: "📆" },
+  { label: "Günlük Kâr", value: "0 USD", icon: "📅" },
+  { label: "Haftalık Kâr", value: "0 USD", icon: "📆" },
   { label: "Yatırım Tutarı", value: "0 USD", icon: "💵" },
   { label: "Para Çekme", value: "0 USD", icon: "🏦" },
 ];
@@ -34,7 +33,7 @@ export default function Panel() {
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <div className="card p-6">
             <div className="text-sm text-slate-400">Mevcut Bakiye</div>
-            <div className="mt-2 text-3xl font-bold">$10,00</div>
+            <div className="mt-2 text-3xl font-bold">$0,00</div>
             <div className="mt-4 flex gap-2">
               <button className="rounded-lg bg-emerald-500 px-4 py-2 text-xs font-medium text-slate-950 hover:bg-emerald-400">+ YATIR</button>
               <button className="rounded-lg border border-slate-700 px-4 py-2 text-xs hover:bg-slate-900">ÇEK</button>
@@ -42,7 +41,7 @@ export default function Panel() {
           </div>
           <div className="card p-6">
             <div className="text-sm text-slate-400">Kazanç Bakiyesi</div>
-            <div className="mt-2 text-3xl font-bold text-emerald-400">$0,018438</div>
+            <div className="mt-2 text-3xl font-bold text-emerald-400">$0,00</div>
             <div className="mt-4 flex gap-2">
               <button className="rounded-lg bg-emerald-500 px-4 py-2 text-xs font-medium text-slate-950 hover:bg-emerald-400">PARA ÇEK</button>
               <button className="rounded-lg border border-slate-700 px-4 py-2 text-xs hover:bg-slate-900">TAKAS</button>
